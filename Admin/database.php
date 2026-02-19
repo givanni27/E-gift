@@ -1,16 +1,18 @@
 <?php
-// Mengambil data dari "catatan rahasia" Railway
-$host = getenv('DB_HOST');
-$user = getenv('DB_USER');
-$pass = getenv('DB_PASS');
-$db   = getenv('DB_NAME');
-$port = getenv('DB_PORT');
+// Tampilkan error biar kalau ada masalah gak putih lagi
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
-// Cara nyambunginnya
+// Railway biasanya kasih variable ini otomatis kalau kita pake MySQL Railway
+$host = getenv('MYSQLHOST') ?: 'db'; 
+$user = getenv('MYSQLUSER') ?: 'db';
+$pass = getenv('MYSQLPASSWORD') ?: 'db';
+$db   = getenv('MYSQLDATABASE') ?: 'db';
+$port = getenv('MYSQLPORT') ?: '3306';
+
 $conn = mysqli_connect($host, $user, $pass, $db, $port);
 
 if (!$conn) {
-    die("Aduh, gagal nyambung: " . mysqli_connect_error());
+    die("Aduh, koneksi database gagal: " . mysqli_connect_error());
 }
-// Kalau sukses, aplikasi kamu sudah bisa baca database-mu sendiri!
 ?>
