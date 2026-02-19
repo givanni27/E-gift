@@ -1,0 +1,20 @@
+{
+  "name": "e-gift",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx @tailwindcss/cli -i ./Users/assets/src/input.css -o ./Users/assets/src/output.css --watch & npx esbuild ./Users/assets/src/elements.js --bundle --format=iife --outfile=./Users/assets/src/elements.bundle.js --watch",
+    "build": "npx @tailwindcss/cli -i ./Users/assets/src/input.css -o ./Users/assets/src/output.css --minify && npx esbuild ./Users/assets/src/elements.js --bundle --minify --platform=browser --format=iife --outfile=./Users/assets/src/elements.bundle.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.18",
+    "@tailwindplus/elements": "^1.0.22",
+    "tailwindcss": "^4.1.18"
+  },
+  "devDependencies": {
+    "esbuild": "^0.27.2"
+  }
+}
