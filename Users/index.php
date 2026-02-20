@@ -1,14 +1,12 @@
 <?php
 session_start();
 
-// Tambahkan isset agar tidak error jika session belum dibuat
-if (!isset($_SESSION['id_users']) || $_SESSION['id_users'] != true) {
+if ($_SESSION['id_users'] != true) {
     header('location:login.php');
-    exit(); // Penting untuk menghentikan script setelah redirect
 }
 
-include('../Admin/database.php'); // Perhatikan tanda ; di sini
-?> 
+include('../Admin/database.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -667,6 +665,7 @@ if (isset($_GET['checkout']) && $_GET['checkout'] == 'success' && isset($_GET['i
 
 
 </html>
+
 
 
 
