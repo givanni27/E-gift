@@ -22,10 +22,11 @@ if ($cek > 0) {
     $_SESSION['email'] = $row['email'];
     $_SESSION['berhasil'] = true;
 
-    header('location:../Users/index.php');
+    header('location:./Users/index.php');
     exit();
 } else {
     header('location:login.php?pesan=gagal');
     exit();
 }
+
 
