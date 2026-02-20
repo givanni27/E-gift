@@ -2,6 +2,7 @@
 session_start();
 if ($_SESSION['id_users'] != true) {
     header('location:login.php');
+    exit();
 }
 
 include('../Admin/database.php');
@@ -664,4 +665,5 @@ if (isset($_GET['checkout']) && $_GET['checkout'] == 'success' && isset($_GET['i
 
 
 </html>
+
 
