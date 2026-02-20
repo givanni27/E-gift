@@ -1,46 +1,12 @@
 <?php
-// 1. Gunakan Output Buffering untuk mencegah error "headers already sent"
-ob_start();
 session_start();
 
-// 2. Include database
-include '../Admin/database.php';
-
-// 3. Ambil data dan amankan dari SQL Injection sederhana
-$Email = mysqli_real_escape_string($koneksi, $_POST['Email']);
-$Password = mysqli_real_escape_string($koneksi, $_POST['Password']);
-
-// 4. Jalankan Query
-$query = "SELECT * FROM users WHERE email= '$Email' AND password = '$Password'";
-$sql = mysqli_query($koneksi, $query);
-
-if ($sql) {
-    $cek = mysqli_num_rows($sql);
-
-    if ($cek > 0) {
-        $row = mysqli_fetch_array($sql);
-        
-        // Simpan data ke session
-        $_SESSION['id_users'] = $row['id_users'];
-        $_SESSION['username_users'] = $row['username_users'];
-        $_SESSION['email'] = $row['email'];
-        $_SESSION['berhasil'] = true;
-
-        // 5. Redirect ke halaman utama User
-        header('Location: ../Users/index.php');
-        exit(); 
-    } else {
-        // Jika gagal, kembalikan ke login dengan pesan
-        header('Location: login.php?pesan=gagal');
-        exit();
-    }
-} else {
-    // Jika query error (misal tabel belum ada), tampilkan errornya
-    die("Error Database: " . mysqli_error($koneksi));
+if ($_SESSION['id_users'] != true) {
+    header('location:login.php');
 }
 
-ob_end_flush();
-?>
+
+include('../Admin/database.php')
 
 <!DOCTYPE html>
 <html lang="en">
