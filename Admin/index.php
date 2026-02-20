@@ -6,7 +6,7 @@ if ($_SESSION['id_admin'] != true) {
 }
 
 
-include('database.php')
+include('database.php');
   ?>
 <!DOCTYPE html>
 <html lang="en">
