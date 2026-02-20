@@ -664,9 +664,8 @@ if (isset($_GET['checkout']) && $_GET['checkout'] == 'success' && isset($_GET['i
         }
     </script>
 <?php endif; ?>
-
-
 </html>
+
 
 
 
