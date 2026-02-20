@@ -15,12 +15,13 @@ if ($cek > 0) {
     $_SESSION['username_users'] = $row['username_users'];
     $_SESSION['email'] = $row['email'];
     $_SESSION['berhasil'] = true;
-    header('location:index.php'); // Pastikan tidak ada enter di atas baris ini
+    header('location:Users/index.php'); // Pastikan tidak ada enter di atas baris ini
     exit(); 
 } else {
     header('location:login.php?pesan=gagal');
     exit();
 }
+
 
 
 
