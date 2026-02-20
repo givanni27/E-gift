@@ -1,13 +1,13 @@
 <?php
 session_start();
 
-// Cek session dengan isset agar tidak error jika belum login
-if (!isset($_SESSION['id_users']) || $_SESSION['id_users'] != true) {
+// Cek apakah session id_users ada, jika TIDAK ada, arahkan ke login
+if (!isset($_SESSION['id_users'])) {
     header('location:login.php');
     exit();
 }
 
-include('../Admin/database.php');
+include('../Admin/database.php'); // Pastikan titik koma ada di sini
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -665,6 +665,7 @@ if (isset($_GET['checkout']) && $_GET['checkout'] == 'success' && isset($_GET['i
     </script>
 <?php endif; ?>
 </html>
+
 
 
 
