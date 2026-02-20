@@ -1,6 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <?php
 session_start();
 
@@ -12,6 +9,8 @@ if ($_SESSION['id_users'] != true) {
 include('../Admin/database.php')
     ?>
 
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -665,5 +664,6 @@ if (isset($_GET['checkout']) && $_GET['checkout'] == 'success' && isset($_GET['i
         }
     </script>
 <?php endif; ?>
+
 
 </html>
