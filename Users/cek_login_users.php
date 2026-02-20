@@ -23,7 +23,9 @@ if ($cek > 0) {
     $_SESSION['berhasil'] = true;
 
     header('location:../Users/index.php');
-    exit ();
+    exit();
 } else {
     header('location:login.php?pesan=gagal');
+    exit();
 }
+
