@@ -1,5 +1,4 @@
 <?php
-// aktifkan session
 session_start();
 
 // include database
