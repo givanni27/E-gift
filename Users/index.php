@@ -1,7 +1,8 @@
 <?php
 session_start();
 
-if (!isset($_SESSION['id_users'])) {
+// Cek session dengan isset agar tidak error jika belum login
+if (!isset($_SESSION['id_users']) || $_SESSION['id_users'] != true) {
     header('location:login.php');
     exit();
 }
@@ -666,6 +667,7 @@ if (isset($_GET['checkout']) && $_GET['checkout'] == 'success' && isset($_GET['i
 
 
 </html>
+
 
 
 
