@@ -1,6 +1,6 @@
 <?php
 session_start();
-include ('../Admin/database.php');
+include ('Admin/database.php');
 
 $Password = $_POST['Password'];
 $Email = $_POST['Email'];
@@ -21,3 +21,4 @@ if ($cek > 0) {
     header('location:login.php?pesan=gagal');
     exit();
 }
+
