@@ -6,7 +6,6 @@ if ($_SESSION['id_users'] != true) {
 
 include('../Admin/database.php');
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -665,3 +664,4 @@ if (isset($_GET['checkout']) && $_GET['checkout'] == 'success' && isset($_GET['i
 
 
 </html>
+
