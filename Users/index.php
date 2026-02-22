@@ -132,7 +132,7 @@ include('../Admin/database.php'); // Pastikan titik koma ada di sini
         <div class="mx-auto max-w-7xl px-6 py-16 sm:px-8 lg:px-12">
             <div class="max-w-3xl mx-auto text-center">
                 <h1 class="text-4xl font-bold text-gray-900 sm:text-6xl dark:text-white leading-tight">
-                    Halo <span class="text-indigo-600 block sm:inline"><?= $_SESSION['username_users']; ?></span>,
+                    Halo <span class="text-indigo-600 block sm:inline"><?= $_SESSION['username_users']; ?>,</span>
                     selamat datang di
                     Belanja Boneka!
                 </h1>
@@ -665,6 +665,7 @@ if (isset($_GET['checkout']) && $_GET['checkout'] == 'success' && isset($_GET['i
     </script>
 <?php endif; ?>
 </html>
+
 
 
 
