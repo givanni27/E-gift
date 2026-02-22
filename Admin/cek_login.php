@@ -1,5 +1,4 @@
 <?php
-// aktifkan session
 session_start();
 
 // include database
@@ -17,11 +16,13 @@ $cek = mysqli_num_rows($sql);
 
 if ($cek > 0) {
     $row = mysqli_fetch_array($sql);
+    
     $_SESSION['id_admin'] = $row['id_admin'];
     $_SESSION['username_admin'] = $row['username_admin'];
-    header('location:index.php');
+    
+    header('Location:index.php');
     exit();
 } else {
-    header('location:login.php?pesan=gagal');
+    header('Location:login.php?pesan=gagal');
     exit();
 }
