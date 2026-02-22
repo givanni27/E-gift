@@ -1,15 +1,17 @@
 <?php
 session_start();
+
+// Tambahkan ini untuk memunculkan pesan error di layar
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
 
 if (!isset($_SESSION['id_admin'])) {
-    header('location:login.php');
+    // Pastikan file login.php ada di folder Admin
+    header('Location: login.php'); 
     exit();
 }
 
-include('database.php'); // Pastikan titik koma ada di sini
+include('database.php'); // Path yang sudah diperbaiki
 ?>
 <!DOCTYPE html>
 <html lang="en">
