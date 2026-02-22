@@ -26,6 +26,8 @@ if (isset($_POST['id_products']) && isset($_POST['qty'])) {
 <html>
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Users/assets/src/output.css" />
     <script src="../Users/assets/src/elements.js"></script>
 </head>
@@ -152,5 +154,6 @@ if (isset($_POST['id_products']) && isset($_POST['qty'])) {
         }
     </script>
 </body>
+
 
 </html>
