@@ -20,9 +20,10 @@ if ($cek > 0) {
     $_SESSION['id_admin'] = $row['id_admin'];
     $_SESSION['username_admin'] = $row['username_admin'];
     
-    header('Location:index.php');
+    header('Location: index.php');
     exit();
 } else {
-    header('Location:login.php?pesan=gagal');
+    header('Location: login.php?pesan=gagal');
     exit();
 }
+
