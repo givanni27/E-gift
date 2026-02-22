@@ -1,7 +1,6 @@
 <?php
 session_start();
 
-// Cek apakah session id_users ada, jika TIDAK ada, arahkan ke login
 if (!isset($_SESSION['id_admin'])) {
     header('location:login.php');
     exit();
