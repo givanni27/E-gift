@@ -1,13 +1,14 @@
 <?php
 session_start();
 
-if ($_SESSION['id_admin'] != true) {
-  header('location:login.php');
+// Cek apakah session id_users ada, jika TIDAK ada, arahkan ke login
+if (!isset($_SESSION['id_admin'])) {
+    header('location:login.php');
+    exit();
 }
 
-
-include('database.php');
-  ?>
+include('../Admin/database.php'); // Pastikan titik koma ada di sini
+?>
 <!DOCTYPE html>
 <html lang="en">
 
