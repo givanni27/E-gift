@@ -5,7 +5,6 @@ session_start();
 // include database
 include 'database.php';
 
-// mengambil dari form login.php
 $username = $_POST['username'];
 $password = $_POST['password'];
 
@@ -20,11 +19,9 @@ if ($cek > 0) {
     $row = mysqli_fetch_array($sql);
     $_SESSION['id_admin'] = $row['id_admin'];
     $_SESSION['username_admin'] = $row['username_admin'];
-
     header('location:index.php');
     exit();
 } else {
     header('location:login.php?pesan=gagal');
     exit();
 }
-
