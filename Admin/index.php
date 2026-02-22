@@ -6,7 +6,7 @@ if (!isset($_SESSION['id_admin'])) {
     exit();
 }
 
-include('../Admin/database.php'); // Pastikan titik koma ada di sini
+include('database.php'); // Pastikan titik koma ada di sini
 ?>
 <!DOCTYPE html>
 <html lang="en">
