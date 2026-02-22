@@ -22,6 +22,9 @@ if ($cek > 0) {
     $_SESSION['username_admin'] = $row['username_admin'];
 
     header('location:index.php');
+    exit();
 } else {
     header('location:login.php?pesan=gagal');
+    exit();
 }
+
