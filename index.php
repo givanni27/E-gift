@@ -72,7 +72,7 @@ include('Admin/database.php')
                             Login
                         </a>
 
-                        <a class="block rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-teal-600 transition hover:text-teal-600/75 sm:block dark:bg-gray-800 dark:text-white dark:hover:text-white/75"
+                        <a class="hidden rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-teal-600 transition hover:text-teal-600/75 sm:block dark:bg-gray-800 dark:text-white dark:hover:text-white/75"
                             href="./Users/register.php">
                             Register
                         </a>
@@ -442,4 +442,5 @@ include('Admin/database.php')
 
 
 </html>
+
 
