@@ -115,11 +115,6 @@ include('Admin/database.php')
                         href="./Users/login.php">
                         Ayo lanjutkan
                     </a>
-
-                    <a class="inline-block rounded-lg border border-gray-300 px-8 py-3 font-medium text-gray-700 shadow-sm transition hover:bg-gray-50 dark:border-gray-700 dark:text-gray-200 dark:hover:bg-gray-800"
-                        href="#">
-                        Yang lainnya
-                    </a>
                 </div>
             </div>
         </div>
@@ -350,12 +345,6 @@ include('Admin/database.php')
                         <li>
                             <a href="#" class="text-gray-500 transition hover:opacity-75 dark:text-gray-400">
                                 Privacy Policy
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#" class="text-gray-500 transition hover:opacity-75 dark:text-gray-400">
-                                Cookies
                             </a>
                         </li>
                     </ul>
