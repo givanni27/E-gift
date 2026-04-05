@@ -10,5 +10,5 @@ WORKDIR /app
 # Set port Railway
 ENV PORT=8080
 
-# Start FrankenPHP
-CMD ["php", "-S", "0.0.0.0:${PORT}", "-t", "public"]
+# Start built-in PHP server dengan root folder /app (root aplikasi)
+CMD ["php", "-S", "0.0.0.0:${PORT}", "-t", "/app"]
