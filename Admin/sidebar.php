@@ -7,7 +7,7 @@ $activeMenu = isset($_GET['menu']) ? $_GET['menu'] : '';
     <!-- Brand Logo -->
     <a class="brand-link">
         <img src="./image/logo/liu.jpg" alt="Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-        <span class="brand-text font-weight-light">E-gift - Dashboard</span>
+        <span class="brand-text font-weight-light">Boneka - Dashboard</span>
     </a>
 
     <!-- Sidebar -->
