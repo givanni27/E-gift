@@ -13,7 +13,7 @@ if (isset($_GET['menu'])) {
             break;
 
         case 'project':
-            include('content/project.php');
+            include('content/product.php');
             break;
 
         case 'pesanan':
