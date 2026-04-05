@@ -1,15 +1,12 @@
 <?php
-// Mengambil data dari environment variables Railway
-$host = getenv('MYSQLHOST') ?: "mysql.railway.internal";
-$user = getenv('MYSQLUSER') ?: "root";
-$pass = getenv('MYSQLPASSWORD') ?: "pYTBAlaxErAlOwXxdoKDmJkJGnratqWD";
-$db   = getenv('MYSQLDATABASE') ?: "railway";
-$port = getenv('MYSQLPORT') ?: "3306";
+$host = getenv('MYSQL_HOST');
+$user = getenv('MYSQL_USER');
+$pass = getenv('MYSQL_PASSWORD');
+$db   = getenv('MYSQL_DATABASE');
 
-// Membuat koneksi
-$koneksi = mysqli_connect($host, $user, $pass, $db, $port);
+$conn = new mysqli($host, $user, $pass, $db);
 
-// Cek koneksi
-if (!$koneksi) {
-    die("Koneksi gagal: " . mysqli_connect_error());
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
 }
+echo "Database connected ✅";
