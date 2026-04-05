@@ -400,11 +400,7 @@ include('../Admin/database.php'); // Pastikan titik koma ada di sini
                             </a>
                         </li>
 
-                        <li>
-                            <a href="#" class="text-gray-500 transition hover:opacity-75 dark:text-gray-400">
-                                Cookies
-                            </a>
-                        </li>
+                       
                     </ul>
 
                     <ul class="mt-8 flex justify-center gap-6 sm:mt-0 lg:justify-end">
