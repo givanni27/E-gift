@@ -45,7 +45,7 @@ $activeMenu = isset($_GET['menu']) ? $_GET['menu'] : '';
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="index.php?menu=project"
+                            <a href="index.php?menu=product"
                                 class="nav-link <?php echo ($activeMenu == 'product') ? 'active' : '' ?>">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Daftar Produk</p>
