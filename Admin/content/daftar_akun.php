@@ -80,12 +80,12 @@
                                         <br/>
                                     </td>
                                     <td class="project-actions text-right">
-                                        <a data-toggle="modal" data-target="#editModal<?= $row['id_users']; ?>"
+                                        <a data-toggle="modal" data-target="#editModal<?= $row['id_users']; ?>"        
                                             class="btn btn-info btn-sm">
                                             <i class="fas fa-pencil-alt"></i>
                                         </a>
                                         <a class="btn btn-danger btn-sm"
-                                            href="proses/proses_tambah_akun.php?proses=delete&id_users=<?php echo $row['id_users']; ?>&nama_pembeli=<?php echo $row['nama_pembeli']; ?>"
+                                            href="proses/proses_tambah_akun.php?proses=delete&id_users=<?php echo $row['id_users']; ?>"
                                             onclick="return confirm('Yakin hapus?')" title="Delete">
                                             <i class="fas fa-trash"></i>
                                         </a>
