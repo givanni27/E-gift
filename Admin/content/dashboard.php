@@ -46,14 +46,14 @@
                     <!-- small box -->
                     <div class="small-box bg-success">
                         <?php
-                        $ql = "SELECT stock FROM products";
+                        $ql = "SELECT id_products FROM products";
                         $sl = mysqli_query($koneksi, $ql);
-                        $total_stock = mysqli_num_rows($sl);
+                        $total_barang = mysqli_num_rows($sl);
                         ?>
                         <div class="inner">
-                            <h3><?= $total_stock ?></h3>
+                            <h3><?= $total_barang ?></h3>
 
-                            <p>Jumlah Stok</p>
+                            <p>Jumlah Barang</p>
                         </div>
                         <div class="icon">
                             <i class="ion ion-stats-bars"></i>
