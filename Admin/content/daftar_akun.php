@@ -74,7 +74,7 @@
                                             <i class="fas fa-pencil-alt"></i>
                                         </a>
                                         <a class="btn btn-danger btn-sm"
-                                            href="proses/proses_tambah_akun.php?proses=delete&id_products=<?php echo $row['id_users']; ?>"
+                                            href="proses/proses_tambah_akun.php?proses=delete&id_users=<?php echo $row['id_users']; ?>"
                                             onclick="return confirm('Yakin hapus?')" title="Delete">
                                             <i class="fas fa-trash"></i>
                                         </a>
