@@ -3,7 +3,7 @@ session_start();
 include('../database.php');
 
 if (!isset($_SESSION['id_admin']))
-    exit(header('Location: login.php'));
+    exit(header('Location: Admin/login.php'));
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['proses'])) {
     extract($_POST);
