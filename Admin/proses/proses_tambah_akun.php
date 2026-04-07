@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['proses'])) {
 // 4. Logika Delete
 if (isset($_GET['proses']) && $_GET['proses'] === 'delete') {
     $id_users = $_GET['id_users'];
-    $id_transaksi = $_GET['id_transaksi'];
+    $nama_pembeli = $_GET['nama_pembeli'];
 
     mysqli_query($koneksi, "DELETE FROM transactions WHERE nama_pembeli = '$nama_pembeli'");
     mysqli_query($koneksi, "DELETE FROM users WHERE id_users = '$id_users'");
