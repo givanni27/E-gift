@@ -42,10 +42,10 @@
                         <thead>
                             <tr>
                                 <th style="width: 20px" class="text-center">id</th>
-                                <th style="width: 150px">Nama Akun</th>
+                                <th style="width: 20px" class="text-center">Nama Akun</th>
                                 <th style="width: 10px;" class="text-center">Password</th>
                                 <th style="width: 10px;" class="text-center">Email</th>
-                                <th style="width: 20px">Jumlah Order</th>
+                                <th style="width: 10px" class="text-center">Jumlah Order</th>
                                 <th class="text-right">Aksi</th>
                             </tr>
                         </thead>
@@ -59,7 +59,7 @@
                                     <td class="text-center">
                                         <?php echo $row['id_users']; ?>
                                     </td>
-                                    <td>
+                                    <td class="text-center">
                                         <?php echo $row['username_users']; ?>
                                         <br/>
                                     </td>
