@@ -32,10 +32,10 @@
                         <thead>
                             <tr>
                                 <th style="width: 120px" class="text-center">ID Invoice</th>
-                                <th style="width: 200px">Pelanggan</th>
+                                <th style="width: 120px" class="text-center">Pelanggan</th>
                                 <th class="text-center">Total Bayar</th>
-                                <th style="width: 150px" class="text-center">Tanggal</th>
-                                <th style="width: 100px" class="text-center">Status</th>
+                                <th style="width: 50px" class="text-center">Tanggal</th>
+                                <th style="width: 50px" class="text-center">Status</th>
                                 <th class="text-right">Aksi</th>
                             </tr>
                         </thead>
@@ -64,7 +64,7 @@
                                     <td class="text-center font-weight-bold text-primary">
                                         #INV-<?= $id_transaksi ?>
                                     </td>
-                                    <td>
+                                    <td class="text-center">
                                         <span class="font-weight-bold"><?= htmlspecialchars($nama_pembeli) ?></span>
                                         <br />
                                         <small class="text-muted">WA: <?= htmlspecialchars($no_hp) ?></small>
