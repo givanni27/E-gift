@@ -20,7 +20,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['proses'])) {
 // 4. Logika Delete
 if (isset($_GET['proses']) && $_GET['proses'] === 'delete') {
     $id_users = $_GET['id_users'];
-    $data = mysqli_fetch_assoc(mysqli_query($koneksi, "SELECT * FROM users WHERE id_users = '$id_users'"));
     mysqli_query($koneksi, "DELETE FROM users WHERE id_users = '$id_users'");
     header("location:../index.php?menu=daftar_akun");
 }
