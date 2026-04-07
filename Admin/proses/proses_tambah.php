@@ -70,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['proses'])) {
         : "UPDATE products SET name='$name', price='$price', stock='$stock', image='$image_db', id_category='$id_category' WHERE id_products='$id_products'";
 
     mysqli_query($koneksi, $sql);
-    header("Location: ../index.php?menu=project");
+    header("Location: ../index.php?menu=product");
 }
 
 // 4. Logika Delete
@@ -80,6 +80,6 @@ if (isset($_GET['proses']) && $_GET['proses'] === 'delete') {
     if ($data['image'] != 'default.jpg')
         @unlink("../image/" . $data['image']);
     mysqli_query($koneksi, "DELETE FROM products WHERE id_products = '$id'");
-    header("Location: ../index.php?menu=project");
+    header("Location: ../index.php?menu=product");
 
 }
