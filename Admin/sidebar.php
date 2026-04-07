@@ -51,6 +51,13 @@ $activeMenu = isset($_GET['menu']) ? $_GET['menu'] : '';
                                 <p>Daftar Produk</p>
                             </a>
                         </li>
+                         <li class="nav-item">
+                            <a href="index.php?menu=daftar_akun"
+                                class="nav-link <?php echo ($activeMenu == 'daftar_akun') ? 'active' : '' ?>">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Akun</p>
+                            </a>
+                        </li>
                         <li class="nav-item">
                             <a href="index.php?menu=pesanan"
                                 class="nav-link <?php echo ($activeMenu == 'pesanan') ? 'active' : '' ?>">
