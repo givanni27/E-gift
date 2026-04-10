@@ -12,6 +12,21 @@
     <section class="min-h-screen flex flex-col items-center justify-center bg-gray-900">
         <div class="w-full max-w-md">
 
+             <?php
+            if (isset($_GET['error'])) {
+                if ($_GET['error'] == "email_dipakai") { ?>
+                    <script>
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Register gagal',
+                            text: 'Email telah ada!',
+                            confirmButtonColor: '#3085d6'
+                        });
+                    </script>
+                <?php }
+            }
+            ?>
+
             <div class="relative rounded-t-lg bg-gray-700 text-center py-3">
                 <p class="text-white">Buat Akun</p>
                 <button type="button" onclick="window.location.href='../index.php'"
