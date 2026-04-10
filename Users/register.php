@@ -43,6 +43,21 @@
             }
             ?>
 
+         <?php
+            if (isset($_GET['error'])) {
+                if ($_GET['error'] == "password_tidaksama") { ?>
+                    <script>
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Register gagal',
+                            text: 'Password tidak sama!',
+                            confirmButtonColor: '#3085d6'
+                        });
+                    </script>
+                <?php }
+            }
+            ?>
+
             
 
             <div class="relative rounded-t-lg bg-gray-700 text-center py-3">
